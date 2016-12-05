@@ -1,0 +1,12 @@
+<h2>Upload a file</h2>
+
+<h4>Upload on file select</h4>
+<button type="file" ngf-select="controller.uploadFiles($file, $invalidFiles)"
+        accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+    Select File</button>
+<br><br>
+File:
+<div style="font:smaller">{{controller.f.name}} {{controller.errFile.name}} {{controller.errFile.$error}} {{controller.errFile.$errorParam}}
+</div>
+<img ng-show="controller.f.$valid" ngf-thumbnail="controller.f" class="thumb">
+{{controller.errorMsg}}
